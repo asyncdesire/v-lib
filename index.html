@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>V Lib</title>
+</head>
+
+<body>
+
+    <!-- Header goes here -->
+    <header>
+        <div id="header">
+            <a href="#">V Lib</a>
+        </div>
+    </header>
+
+    <!-- Adding books -->
+    <main>
+        <!-- Getting books details -->
+        <div id="get-book">
+            <form action="#">
+                <div>
+                    <h1>Add Book</h1>
+                </div>
+                <div id="title-div">
+                    <label for="title">Title :</label>
+                    <input type="text" id="title" name="title">
+                </div>
+
+                <div id="author-div">
+                    <label for="author">Author :</label>
+                    <input type="text" id="author" name="author">
+                </div>
+
+                <div id="pages-div">
+                    <label for="pages">Pages :</label>
+                    <input type="number" name="pages" id="pages">
+                </div>
+
+                <div id="status-div">
+                    <label for="status">Read :</label>
+                    <input type="checkbox" name="status" id="status">
+                </div>
+
+                <div id="btn">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+
+        <!-- Adding books to Shelf -->
+        <div id="set-book"></div>
+    </main>
+
+</body>
+
+</html>
