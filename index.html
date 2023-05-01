@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>V Lib</title>
 </head>
 
@@ -29,32 +29,33 @@
                 </div>
                 <div id="title-div">
                     <label for="title">Title :</label>
-                    <input type="text" id="title" name="title">
+                    <input type="text" id="title" name="title" value="Bricks">
                 </div>
 
                 <div id="author-div">
                     <label for="author">Author :</label>
-                    <input type="text" id="author" name="author">
+                    <input type="text" id="author" name="author" value="random">
                 </div>
 
                 <div id="pages-div">
                     <label for="pages">Pages :</label>
-                    <input type="number" name="pages" id="pages">
+                    <input type="number" name="pages" id="pages" value="200">
                 </div>
 
                 <div id="status-div">
                     <label for="status">Read :</label>
-                    <input type="checkbox" name="status" id="status">
+                    <input type="checkbox" name="status" id="status" value="On" checked>
                 </div>
 
-                <div id="btn">
-                    <input type="submit">
+                <div id="btn-div">
+                    <input id="btn" type="submit" value="Submit">
+                    <!-- <button id="btn">Submit</button> -->
                 </div>
             </form>
         </div>
 
         <!-- Adding books to Shelf -->
-        <div id="set-book"></div>
+        <div id="book-container"></div>
     </main>
 
 </body>

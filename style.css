@@ -69,3 +69,10 @@ form div {
     position: absolute;
     right: 1px;
 }
+
+#card {
+    width: 200px;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px;
+}
