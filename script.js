@@ -13,19 +13,30 @@ function addBookToLibrary() {
     const getTitle = document.getElementById('title').value;
     const getAuthor = document.getElementById('author').value;
     const getPages = document.getElementById('pages').value;
+    const pageText = `${getPages} pages`
 
     if (getTitle === '' || getAuthor === '' || getPages === '') {
         alert('Plaese fill all inputs.')
     } else {
-        const addBook = new Book(getTitle, getAuthor, getPages, readStatus())
+        const addBook = new Book(getTitle, getAuthor, pageText, readStatus())
         myLibrary.push(addBook);
         clearBooks();
-    }
-    function clearBooks() {
-        getTitle = '';
+        addRemoveButton();
     }
 }
 
+function addRemoveButton() {
+    const addBtn = document.createElement('button');
+    createCard.append(addBtn);
+}
+
+
+Object.assign(Book, clearBooks);
+function clearBooks() {
+    this.title.value = '';
+    this.author.value = '';
+    this.pages.value = '';
+}
 
 function readStatus() {
     const getStatus = document.getElementById('status');

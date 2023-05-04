@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Playball&display=swap');
 
 *,
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playball', cursive;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 }
 
 #get-book form{
-    /* width: 35vw; */
+    width: max(35vh, 15.625em);
     position: absolute;
     right: 2vw;
     /* margin: 20px auto; */
@@ -70,9 +70,48 @@ form div {
     right: 1px;
 }
 
+#book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: row;
+    overflow: auto;
+    /* flex-direction: row; */
+    height: 70vh;
+    width: 70vw;
+}
+
 #card {
-    width: 200px;
+    /* width: 200px; */
+    /* height: 250px; */
     background-color: antiquewhite;
     padding: 20px;
     margin: 20px;
+    position: relative;
+    border-radius:1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+#card button {
+    background-color: tomato;
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: .3em;
+    border: none;
+    /* width: 100%; */
+    cursor: pointer;
+    /* flex: 0; */
+    width: 50%;
+}
+
+#card h1 {
+    font-size: 1.5em;
+}
+
+#card h2, h3 {
+    font-size: 1em;
+    font-weight: lighter;
+    font-style: italic;
 }
