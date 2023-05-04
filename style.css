@@ -81,7 +81,7 @@ form div {
     width: 70vw;
 }
 
-#card {
+.card {
     /* width: 200px; */
     /* height: 250px; */
     background-color: antiquewhite;
@@ -94,7 +94,7 @@ form div {
     gap: .5em;
 }
 
-#card button {
+.card button {
     background-color: tomato;
     color: white;
     padding: 0.3em 1em;
@@ -103,14 +103,14 @@ form div {
     /* width: 100%; */
     cursor: pointer;
     /* flex: 0; */
-    width: 50%;
+    /* width: 15vw; */
 }
 
-#card h1 {
+.card h1 {
     font-size: 1.5em;
 }
 
-#card h2, h3 {
+.card h2, h3 {
     font-size: 1em;
     font-weight: lighter;
     font-style: italic;

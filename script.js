@@ -21,15 +21,8 @@ function addBookToLibrary() {
         const addBook = new Book(getTitle, getAuthor, pageText, readStatus())
         myLibrary.push(addBook);
         clearBooks();
-        addRemoveButton();
     }
 }
-
-function addRemoveButton() {
-    const addBtn = document.createElement('button');
-    createCard.append(addBtn);
-}
-
 
 Object.assign(Book, clearBooks);
 function clearBooks() {
@@ -53,21 +46,37 @@ function readStatus() {
 
 function createBook(item) {
     const createCard = document.createElement('div');
-    createCard.setAttribute('id', 'card');
+    createCard.setAttribute('class', 'card');
     const createTitle = document.createElement('h1');
     createTitle.innerHTML = item.title;
     const createAuthor = document.createElement('h2');
     createAuthor.innerHTML = item.author;
     const createPages = document.createElement('h3');
     createPages.innerHTML = item.pages;
-    const createStatus = document.createElement('h3')
+    const createStatus = document.createElement('h3');
     createStatus.innerHTML = item.status;
-
-    createCard.append(createTitle, createAuthor, createPages, createStatus);
+    const addRemoveButton = document.createElement('button');
+    addRemoveButton.textContent = 'Remove';
+    createCard.append(createTitle, createAuthor, createPages, createStatus, addRemoveButton);
     bookContainer.append(createCard);
     // Make Book History
     // bookHistory();
     clearLibrary();
+    addRemoveButton.addEventListener('click', () => {
+        createCard.remove();
+    });
+}
+
+
+// console.log(this.createBook())
+// addRemoveButton.addEventListener('click', (e) => {
+//     console.log(bookContainer)
+// })
+
+// addRemoveButton.addEventListener('click', removeBook)
+
+function removeBook() {
+    createCard.remove();
 }
 
 function clearLibrary() {
